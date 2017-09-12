@@ -34,8 +34,8 @@ class Airplane(Vehicle):
     def fly(self, miles):
         self.mileage+=miles
         return self
-    def drive(self,miles):
-        raise NotImplementedError#this is one way to kill drive method for aiplane. I find it at internet. Not neccessary to do that .
+    # def drive(self,miles):
+    #     raise NotImplementedError#this is one way to kill drive method for aiplane. I find it at internet. Not neccessary to do that .
 '''
 for me, inheritance is like adding new functions and ignore some old funcitons, but are thsoe old function still there?
 will it cause problem? Does class Airplane has a drive function?
@@ -91,7 +91,7 @@ arrplus1(1,2,3,4)
 # supper try to add a parameter to child class
 
 class Motorcycle(Vehicle):
-    def __init__(self,capacity,make,model,color):#parameters of parent class + parementer you gona creat
+    def __init__(self,capacity,make,model,color):#parameters of parent class + parementer you gona creat.if you want to set up a certern number of one parent parameter, just dont pass the parameter here
         super(Motorcycle, self).__init__(2,capacity,make,model)#parameters of parent class
         self.color=color
 motorola=Motorcycle(853,'Toyota','Matrix','blue')
@@ -99,7 +99,7 @@ print motorola.wheels
 '''
 super() argument 1 must be type, not classobj if I haven't write parent class '(object)'
 if there is some parameter of parent class are not usefull--you need a certain value for them so don't need 
-to pass argument---you just change the parament after super and __init__function to a certain number
+to pass argument---you just change the parament after super and __init__function to a certain number.And don't pass it to child's init function
 if you want to remove a parameter which passed from parent class to child class, best way is just write none in 
 arugement.
 
